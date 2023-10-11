@@ -119,6 +119,7 @@ PLUGINS = { # plugins with external dependencies
             'gdal':    {'default':True,'path':None,'inc':'gdal_priv.h','lib':'gdal','lang':'C++'},
             'ogr':     {'default':True,'path':None,'inc':'ogrsf_frmts.h','lib':'gdal','lang':'C++'},
             'sqlite':  {'default':True,'path':'SQLITE','inc':'sqlite3.h','lib':'sqlite3','lang':'C'},
+            'vector_tile':  {'default':True,'path':'SQLITE','inc':'sqlite3.h','lib':'sqlite3','lang':'C'},
             # plugins without external dependencies requiring CheckLibWithHeader...
             'shape':   {'default':True,'path':None,'inc':None,'lib':None,'lang':'C++'},
             'csv':     {'default':True,'path':None,'inc':None,'lib':None,'lang':'C++'},
@@ -1885,6 +1886,7 @@ if not preconfigured:
     env.Prepend(CPPPATH = '#deps/mapbox/geometry/include')
     env.Prepend(CPPPATH = '#deps/mapbox/protozero/include')
     env.Prepend(CPPPATH = '#deps/mapbox/polylabel/include')
+    env.Prepend(CPPPATH = '#deps/mapbox/wagyu/include')
     # prepend deps dir for auxillary headers
     env.Prepend(CPPPATH = '#deps')
 
