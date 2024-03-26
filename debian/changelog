@@ -1,0 +1,954 @@
+mapnik (3.1.0+ds-1geofabrik-3) jammy; urgency=medium
+
+  * Add open_options support for OGR input plugin
+  * Drop mbtiles_vector plugin
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Thu, 07 Dec 2023 18:31:58 +0100
+
+mapnik (3.1.0+ds-1geofabrik-2) jammy; urgency=medium
+
+  * Fixes to make latest python-mapnik buildable
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Wed, 25 Oct 2023 17:04:32 +0200
+
+mapnik (3.1.0+ds-1geofabrik) jammy; urgency=medium
+
+  * Add mbtiles_vector plugin
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Fri, 20 Oct 2023 15:26:17 +0200
+
+mapnik (3.1.0+ds-1ubuntu2) jammy; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 10 Feb 2022 05:16:29 +0100
+
+
+mapnik (3.1.0+ds-1ubuntu1) jammy; urgency=medium
+
+  * Cherry-pick patch to stop using deprecated py3 collections import
+
+ -- Jeremy Bicha <jeremy.bicha@canonical.com>  Mon, 07 Feb 2022 11:47:23 -0500
+
+mapnik (3.1.0+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 11 Jan 2021 05:33:41 +0100
+
+mapnik (3.1.0+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rename library package for new minor version.
+  * Drop explicit architecture list, see: #893188.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 08 Jan 2021 14:57:36 +0100
+
+mapnik (3.0.24+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update copyright file.
+  * Drop patches applied upstream.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 05 Jan 2021 14:55:39 +0100
+
+mapnik (3.0.23+ds-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.5.1, no changes.
+  * Add upstream patch for Boost 1.73 compatibility.
+    (closes: #975593)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 12 Dec 2020 13:05:32 +0100
+
+mapnik (3.0.23+ds-2) unstable; urgency=medium
+
+  * Bump debhelper compat to 10, changes:
+    - Drop --parallel option, enabled by default
+  * Bump watch file version to 4.
+  * Update lintian overrides.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 11 Nov 2020 19:39:14 +0100
+
+mapnik (3.0.23+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 25 Feb 2020 11:49:36 +0100
+
+mapnik (3.0.23+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.5.0, no changes.
+  * Drop Name field from upstream metadata.
+  * Add patch to use pkg-config for libxml2.
+    (closes: #949412)
+  * Refresh patches.
+  * Add lintian override for file-references-package-build-path.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 18 Feb 2020 14:50:36 +0100
+
+mapnik (3.0.22+ds1-1) unstable; urgency=medium
+
+  * New repacked upstream release.
+  * Don't exclude scons from upstream tarball.
+  * Add license & copyright for scons sources.
+  * Use embedded copy of scons for the build.
+    (closes: #936017)
+  * Add lintian override for spelling-error-in-binary false positive.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 30 Aug 2019 06:44:17 +0200
+
+mapnik (3.0.22+ds-2) unstable; urgency=medium
+
+  * Remove package name from lintian overrides.
+  * Define ACCEPT_USE_OF_DEPRECATED_PROJ_API_H for PROJ 6.0.0 compatibility.
+  * Update gbp.conf to use --source-only-changes by default.
+  * Bump Standards-Version to 4.4.0, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 11 Jul 2019 13:48:22 +0200
+
+mapnik (3.0.22+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 22 Jan 2019 19:38:20 +0100
+
+mapnik (3.0.22+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.3.0, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 22 Jan 2019 12:29:52 +0100
+
+mapnik (3.0.21+ds-2) unstable; urgency=medium
+
+  * Add upstream patch to use pkg-config for freetype2.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 25 Oct 2018 15:24:53 +0200
+
+mapnik (3.0.21+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 09 Oct 2018 18:23:50 +0200
+
+mapnik (3.0.21+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 08 Oct 2018 16:54:28 +0200
+
+mapnik (3.0.21~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Bump Standards-Version to 4.2.1, no changes.
+  * Update watch file to limit matches to archive path.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 02 Oct 2018 16:08:16 +0200
+
+mapnik (3.0.20+ds-2) unstable; urgency=medium
+
+  * Strip trailing whitespace from changelog & rules files.
+  * Bump Standards-Version to 4.1.5, no changes.
+  * Use filter instead of findstring to prevent partial matches.
+  * Drop autopkgtest to test installability.
+  * Add lintian override for testsuite-autopkgtest-missing.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 31 Jul 2018 21:18:48 +0200
+
+mapnik (3.0.20+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 14 Apr 2018 12:18:59 +0200
+
+mapnik (3.0.20+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update Vcs-* URLs for Salsa.
+  * Bump Standards-Version to 4.1.4, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 12 Apr 2018 15:43:20 +0200
+
+mapnik (3.0.19+ds-1) unstable; urgency=medium
+
+  * Add patch to use pkg-config when freetype-config is not available.
+    (closes: #892062)
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 10 Mar 2018 09:07:21 +0100
+
+mapnik (3.0.19+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 06 Mar 2018 16:16:15 +0100
+
+mapnik (3.0.19~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 05 Mar 2018 15:39:30 +0100
+
+mapnik (3.0.18+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 27 Jan 2018 09:24:25 +0100
+
+mapnik (3.0.18+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update copyright-format URL to use HTTPS.
+  * Bump Standards-Version to 4.1.3, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 26 Jan 2018 17:13:45 +0100
+
+mapnik (3.0.18~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Bump Standards-Version to 4.1.2, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 13 Dec 2017 18:40:54 +0100
+
+mapnik (3.0.17+ds-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 30 Nov 2017 14:18:23 +0100
+
+mapnik (3.0.17+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop scons-3.0.patch, fixed upstream.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 29 Nov 2017 20:54:24 +0100
+
+mapnik (3.0.16+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 16 Nov 2017 18:44:31 +0100
+
+mapnik (3.0.16~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop icu-59.patch, fixed upstream.
+  * Strip trailing whitespace from changelog.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 15 Nov 2017 21:12:32 +0100
+
+mapnik (3.0.15+ds-3) unstable; urgency=medium
+
+  * Add patch Matthias Klose by to fix build with ICU 59.1.
+    (closes: #879835)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 26 Oct 2017 18:51:20 +0200
+
+mapnik (3.0.15+ds-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.1.1, no changes.
+  * Add patch to support scons 3.0.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 04 Oct 2017 19:54:53 +0200
+
+mapnik (3.0.15+ds-1) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.0.0, no changes.
+  * Add autopkgtest to test installability.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 29 Aug 2017 20:39:30 +0200
+
+mapnik (3.0.15+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 16 Jun 2017 20:22:59 +0200
+
+mapnik (3.0.15~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 15 Jun 2017 17:58:24 +0200
+
+mapnik (3.0.14+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 05 Jun 2017 20:09:54 +0200
+
+mapnik (3.0.14~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update copyright years for Artem Pavlenko.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 03 Jun 2017 10:25:05 +0200
+
+mapnik (3.0.13+ds-1~exp2) experimental; urgency=medium
+
+  * Merge changes from mapnik (3.0.12+ds-3).
+    (closes: #859424)
+  * Drop unused lintian overrides for hardening-no-pie.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 03 Apr 2017 15:36:12 +0200
+
+mapnik (3.0.13+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 08 Feb 2017 18:21:29 +0100
+
+mapnik (3.0.13~rc2+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Require at least mapbox-variant 1.1.5.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 06 Feb 2017 18:57:41 +0100
+
+mapnik (3.0.13~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Re-instate lintian override for hardening-no-pie.
+  * Drop dependencies-typo.patch, applied upstream.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 19 Jan 2017 00:11:00 +0100
+
+mapnik (3.0.12+ds-3) unstable; urgency=medium
+
+  * Update branch in gbp.conf & Vcs-Git URL.
+  * Enable PIE hardening buildflags.
+    (closes: #859424)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 03 Apr 2017 14:47:38 +0200
+
+mapnik (3.0.12+ds-2) unstable; urgency=medium
+
+  * Add patch to fix 'dependencies' typo.
+  * Drop unused override for hardening-no-pie.
+  * Change ttf-dejavu dependency to fonts-dejavu.
+  * Reorder (build) dependencies.
+  * Override dh_makeshlibs to use -V.
+  * Add lintian override for no-symbols-control-file.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 05 Nov 2016 14:15:44 +0100
+
+mapnik (3.0.12+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watchfile to not match releases/download.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 08 Sep 2016 15:27:37 +0200
+
+mapnik (3.0.12~rc7+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update copyright file, changes:
+    - Add license & copyright for travis-command-wrapper.py
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 06 Sep 2016 11:16:42 +0200
+
+mapnik (3.0.12~rc6+ds-1~exp2) experimental; urgency=medium
+
+  * Add libcurl-ssl-dev as alternative to libcurl4-gnutls-dev dependencies.
+    (closes: #836057)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 30 Aug 2016 12:59:34 +0200
+
+mapnik (3.0.12~rc6+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 26 Aug 2016 18:56:15 +0200
+
+mapnik (3.0.12~rc5+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 22 Aug 2016 22:21:22 +0200
+
+mapnik (3.0.12~rc4+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop Debian OpenStreetMap Team from Uploaders.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 18 Aug 2016 19:53:39 +0200
+
+mapnik (3.0.12~rc3+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 12 Aug 2016 19:52:20 +0200
+
+mapnik (3.0.12~rc2+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop patches, applied upstream.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 10 Aug 2016 12:36:04 +0200
+
+mapnik (3.0.12~rc1+ds-1~exp2) experimental; urgency=medium
+
+  * Require at least mapbox-variant 1.1.1 for libmapnik-dev dependency too.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 06 Aug 2016 13:02:58 +0200
+
+mapnik (3.0.12~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+    - Fixes FTBFS with Boost 1.61.
+  * Bump Standards-Version to 3.9.8, no changes.
+  * Require at least mapbox-variant 1.1.1.
+  * Update copyright file, changes:
+    - Add Upstream-Name to copyright file.
+    - Reorder Files sections
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 05 Aug 2016 14:56:24 +0200
+
+mapnik (3.0.11+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop refactor-markers_placement_finder.patch, applied upstream.
+  * Refresh remaining patches.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 02 Apr 2016 01:44:11 +0200
+
+mapnik (3.0.10+ds-2) unstable; urgency=medium
+
+  * Remove hurd-i386 & kfreebsd-i386 from supported architectures.
+  * Add patch to refactor markers_placement_finder.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 20 Mar 2016 13:22:07 +0100
+
+mapnik (3.0.10+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Vcs-Git URL to use HTTPS.
+  * Add patches for various typos.
+  * Bump Standards-Version to 3.9.7, no changes.
+  * Override dh_strip to not generate automatic dbgsym packages,
+    those debug files have no debug symbols.
+  * Disable parallel builds on alpha, hurd-i386 & kfreebsd-* too.
+  * Update copyright file, changes:
+    - Update copyright years for Artem Pavlenko.
+    - Drop license & copyright for src/miniz.c, no longer included
+  * Drop 2001_ftemplate-depth.patch, applied upstream.
+  * Add --shape-index option to shapeindex manpage.
+  * Add (build) dependency on libmapbox-variant-dev.
+  * Enable all hardening buildflags, except pie
+    (causes python-mapnik build failures).
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 18 Mar 2016 18:13:42 +0100
+
+mapnik (3.0.9+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 26 Nov 2015 21:10:31 +0100
+
+mapnik (3.0.9~rc3+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Disable parallel builds on armhf too.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 24 Nov 2015 23:58:32 +0100
+
+mapnik (3.0.9~rc2+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Disable parallel builds for Ubuntu on amd64 & ppc64el too.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 11 Nov 2015 00:09:59 +0100
+
+mapnik (3.0.9~rc1+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+    (closes: #803985)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 03 Nov 2015 23:30:15 +0100
+
+mapnik (3.0.8+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Don't remove mapnik-render anymore, upstream says it's suitable for
+    inclusion now.
+  * Include mapnik-index utility in mapnik-utils.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 24 Oct 2015 12:56:59 +0200
+
+mapnik (3.0.7+ds-4) unstable; urgency=medium
+
+  * Fix typo in NJOBS variable for non parallel builds on arm64 & armel.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 14 Oct 2015 22:42:36 +0200
+
+mapnik (3.0.7+ds-3) unstable; urgency=medium
+
+  * Fix disabling of parallel builds on arm64 & armel.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 14 Oct 2015 17:27:24 +0200
+
+mapnik (3.0.7+ds-2) unstable; urgency=medium
+
+  * Disable parallel builds on arm64 & armel.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 14 Oct 2015 16:50:20 +0200
+
+mapnik (3.0.7+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Don't install mapnik-render, like nik2img before the rename.
+  * Pass -j<N> to build and install commands too.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 14 Oct 2015 09:09:29 +0200
+
+mapnik (3.0.6+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Re-enable parallel builds, problematic architectures no longer supported.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 10 Oct 2015 15:59:25 +0200
+
+mapnik (3.0.5+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Drop libmapnik2-dev transitional package.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 20 Sep 2015 12:07:06 +0200
+
+mapnik (3.0.4+ds-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 30 Aug 2015 13:40:37 +0200
+
+mapnik (3.0.3+ds-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update watch file repacksuffix and use common mangling options.
+  * Update copyright file, sort & align copyright holders.
+  * Refresh patches.
+  * Tweak watch file to support v3.0.0-rc-offset.
+  * Restructure control file with cme, change:
+    - Update Vcs-Browser URL to use cgit instead of gitweb, and HTTPS.
+  * Add upstream metadata.
+  * Drop librasterlite dependency, input driver removed in 3.0.1 due to
+    deprecation of librasterlite by its developer. See also:
+    https://github.com/mapnik/mapnik/issues/2977
+  * Rebuild for gdal transition.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 25 Aug 2015 20:34:51 +0200
+
+mapnik (3.0.0+ds-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Bas Couwenberg ]
+  * Add gbp.conf to use pristine-tar by default.
+  * Override dh_install to use --list-missing.
+  * Include static libs in libmapnik-dev for python-mapnik and
+    node-mapnik build.
+  * Don't install nik2img by upstream request.
+  * Exclude mips* from supported architectures.
+
+  [ Jérémy Lal ]
+  * Add a short explanation and a link to upstream explanation into
+    README.Debian.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 16 Jul 2015 18:46:44 +0200
+
+mapnik (3.0.0+ds-1) unstable; urgency=medium
+
+  * Do not append CPPFLAGS to CUSTOM_DEFINES (Closes: #791482)
+    Thanks to James Cowgill.
+  * Imported Upstream version 3.0.0+ds
+  * Remove deps/clipper from copyright section
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 08 Jul 2015 22:15:48 +0200
+
+mapnik (3.0.0~rc3+ds-2) unstable; urgency=medium
+
+  * Restore ftemplate-depth patch - it saves memory usage during compilation.
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 19 Jun 2015 18:31:08 +0200
+
+mapnik (3.0.0~rc3+ds-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.0.0~rc3+ds
+  * Python bindings are now in separate upstream project
+  * Copyright:
+    + syntax fixes
+    + all DFSG-exluded files are now in separate upstream project
+    + boost files moved to deps
+  * Watch: fix mangling, watch rc releases
+  * Build-Depends:
+    + libcairo-dev instead of transitional libcairo2-dev
+    + libgdal-dev instead of libgdal1-dev
+    + libwebp-dev
+    + libharfbuzz-dev
+  * Patches:
+    + unapply previous patches, applied upstream
+  * Rules:
+    + disable building with rpath
+    + build new plugins: pgraster, topojson
+  * Standards-Version 3.9.6
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 27 May 2015 21:13:32 +0200
+
+mapnik (2.2.0+ds1-7) unstable; urgency=medium
+
+  * Standards-Version 3.9.5
+  * Set priority of python-mapnik2, libmapnik2-dev to oldlibs/extra.
+  * Add 1002 upstream patch to reduce memory usage during compilation
+    using BOOST_SPIRIT_NO_PREDEFINED_TERMINALS (#742149).
+  * Disable debugging symbols to save memory during compilation.
+    This and the previous change should be enough to close: #742149.
+  * Build multiple python versions using scons properly, so that scons
+    doesn't build everything twice.
+  * Copyright:
+    + use Files-Excluded, now repackaging is done by uscan
+    + add section for debian/rules technique taken from fife package
+  * Watch github directly, no need for githubredir.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sun, 06 Apr 2014 15:35:41 +0200
+
+mapnik (2.2.0+ds1-6) unstable; urgency=medium
+
+  * Team upload.
+  * Changed libgdal1-dev in libgdal-dev.
+  * Priority set to optional for all packages.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Wed, 11 Dec 2013 18:12:19 +0100
+
+mapnik (2.2.0+ds1-5) unstable; urgency=low
+
+  * Set gcc optimization flag to -O2 instead of -O3.
+  * Add 2001 patch to remove gcc -ftemplate-depth-300 flag.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 12 Oct 2013 16:24:50 +0200
+
+mapnik (2.2.0+ds1-4) unstable; urgency=low
+
+  * Disable completely parallel builds. It might be responsible
+    for memory exhaustion on s390, mipsel, mips.
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 03 Oct 2013 14:24:42 +0200
+
+mapnik (2.2.0+ds1-3) unstable; urgency=low
+
+  * Honour DEB_BUILD_OPTIONS parallel, defaults to 1.
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 02 Oct 2013 21:55:37 +0200
+
+mapnik (2.2.0+ds1-2) unstable; urgency=low
+
+  * Build documentation in -indep target. (Closes: #721579)
+
+ -- Jérémy Lal <kapouer@melix.org>  Sun, 08 Sep 2013 13:34:41 +0200
+
+mapnik (2.2.0+ds1-1) unstable; urgency=low
+
+  [ Andrew Harvey ]
+  * Change debian/rules to use top level font directory (Closes: #665798)
+
+  [ David Paleino ]
+  * New upstream version 2.1
+    - fixed compatibility with PostGIS 2.0 (AsBinary() → ST_AsBinary())
+      (Closes: #699079)
+  * Switch debian/watch to github tags
+  * debian/patches/:
+    - 02-fix_FTBFS_binutils-gold.patch refreshed
+    - 03-fix_ImportError_mips.patc, 03-fix_big-endian.patch and
+      04-port_to_new_boost.patch removed
+  * Python bindings testsuite temporarily disabled
+  * Adapt debian/rules get-orig-source target to new upstream layout
+  * Build-Depends on libpng-dev instead of libpng12-dev (Closes: #662425)
+  * Bump debhelper compatibility to 9
+  * Bump Standards-Version to 3.9.4, no changes needed
+
+  [ Jérémy Lal ]
+  * New upstream version 2.2
+  * control:
+    + Transition libmapnik2 to libmapnik (#674587)
+    + Transition python-mapnik2 to python-mapnik
+    + Canonicalize Vcs fields
+  * copyright:
+    + entire tarball review
+    + switch to copyright 1.0 format
+    + DFSG-exclude tests/data/fonts/XB\ Zar.ttf (missing license)
+    + conveniently exclude scons, fonts, and some test files for the
+      sake of copyright simplification.
+  * rules:
+    + update input plugins list, remove geos, kismet and add csv,
+      geojson, python.
+    + disable building demo
+    + remove unneeded workarounds in some targets
+    + call epydoc directly instead of fiddling with build script
+    + pass hardening build flags to mapnik SConstruct,
+      thanks to YunQiang Su.
+  * patch: 1001 patch to link mapnik lib to dl.
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 27 Aug 2013 10:16:08 +0200
+
+mapnik (2.0.0+ds1-3) unstable; urgency=low
+
+  * Fix wrong linkage against boost_python-py2*
+
+ -- David Paleino <dapal@debian.org>  Tue, 25 Oct 2011 22:20:35 +0200
+
+mapnik (2.0.0+ds1-2) unstable; urgency=low
+
+  * 03-fix_big-endian.patch added: the variable for big-endian
+    architectures was wrongly named (Closes: #644704)
+
+ -- David Paleino <dapal@debian.org>  Sat, 08 Oct 2011 22:14:59 +0200
+
+mapnik (2.0.0+ds1-1) unstable; urgency=low
+
+  * New upstream version
+  * Debhelper compatibility bumped to 8
+  * New input plugins compiled: geos, rasterlite
+  * Package switch from pysupport to dh_python2
+  * Package renamed from libmapnik0.7 to libmapnik2-2.0
+  * Purge debian/copyright from non-(anymore)-existing files
+
+ -- David Paleino <dapal@debian.org>  Wed, 05 Oct 2011 13:02:49 +0200
+
+mapnik (0.7.1-6) unstable; urgency=low
+
+  * Get rid of obsolete libjpeg62 dependencies.
+    (closes: #629970)
+  * Added me to Uploaders to avoid inappropriate NMUing.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 25 Jul 2011 14:14:28 +0200
+
+mapnik (0.7.1-5) unstable; urgency=low
+
+  * Correctly trap errors in debian/rules, thanks to Jakub Wilk
+    (Closes: #625667)
+
+ -- David Paleino <dapal@debian.org>  Thu, 05 May 2011 09:27:24 +0200
+
+mapnik (0.7.1-4) unstable; urgency=low
+
+  * 04-port_to_new_boost.patch fixes FTBFS with newer Boost::Filesystem,
+    backported from upstream, thanks to Dane Springmeyer (Closes: #624934)
+  * Standards-Version bump to 3.9.2, no changes needed
+
+ -- David Paleino <dapal@debian.org>  Tue, 03 May 2011 11:04:48 +0200
+
+mapnik (0.7.1-3) unstable; urgency=low
+
+  * Compile using internal copy of libagg. (Closes: #603470)
+
+ -- David Paleino <dapal@debian.org>  Fri, 19 Nov 2010 12:14:44 +0100
+
+mapnik (0.7.1-2) unstable; urgency=low
+
+  * debian/patches/03-fix_ImportError_mips.patch added, fixes
+    un-importability on mips{,-el} due to a wrong import. Thanks
+    Jakub Wilk (Closes: #599330)
+
+ -- David Paleino <dapal@debian.org>  Sat, 09 Oct 2010 16:25:18 +0200
+
+mapnik (0.7.1-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/patches/:
+    - 00-fix_amd64_libdir.patch removed, exception for Debian/Ubuntu
+      added in upstream code
+    - 02-fix_FTBFS_binutils-gold.patch refreshed to apply to the new
+      code
+    - 03-fix_typo.patch removed, merged upstream
+
+ -- David Paleino <dapal@debian.org>  Tue, 30 Mar 2010 07:28:55 +0200
+
+mapnik (0.7.0-2) unstable; urgency=low
+
+  * Fix various FTBFS (Closes: #570865)
+  * debian/patches/:
+    - 00-fix_amd64_libdir.patch added, install the shared library
+      in /usr/lib/ also on amd64.
+  * debian/rules:
+    - pass -r to xargs when fixing permissions, thanks to KiBi
+    - ignore errors during doc generation
+
+ -- David Paleino <dapal@debian.org>  Fri, 26 Feb 2010 23:04:32 +0100
+
+mapnik (0.7.0-1) unstable; urgency=low
+
+  [ Dominic Hargreaves ]
+  * Change Maintainer to Debian GIS Project (Closes: #551281)
+  * Add Vcs-Git and Vcs-Browser fields to reflect move to a
+    public repository
+
+  [ David Paleino ]
+  * New upstream release (Closes: #567007)
+  * Package converted to 3.0 (quilt) format
+  * debian/control:
+    - added myself to Uploaders
+    - added Debian OSM Team to Uploaders
+    - wrapped dependency fields (eases reading diffs in commits)
+    - remove duplicate Section in libmapnik0.6
+    - Standards-Version bumped to 3.8.4, no changes needed
+    - fix Build-Dependencies:
+      + bump debhelper version
+      + use python-support instead of python-central
+      + drop useless dependency on python
+      + added scons build-dependency, don't use the embedded one
+    - support Python >= 2.5
+    - libmapnik0.6 → libmapnik0.7 because of SONAME bump
+    - added ${misc:Depends} where missing
+  * debian/watch updated to use new url
+  * debian/rules:
+    - added quilt infrastructure
+    - rewritten to use dh7
+    - handle multiple Python versions
+  * debian/patches/:
+    - 01-generate_local_docs.patch added, tell epydoc to generate
+      docs from local code, don't look for a system-wide module.
+    - 02-fix_FTBFS_binutils-gold.patch added (Closes: #555586)
+    - 03-fix_typo.patch added
+  * debian/copyright, substitute (C) with © to make lintian happy
+  * debian/mapnik-doc.doc-base added
+  * debian/libmapnik-dev.dirs added
+  * debian/*.1 moved to debian/manpages/
+  * debian/compat bumped to 7
+  * debian/copyright updated to be DEP-5-compliant
+
+ -- David Paleino <dapal@debian.org>  Sun, 21 Feb 2010 10:30:54 +0100
+
+mapnik (0.6.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #537802, #545887)
+  * Add dependency on python-cairo to python-mapnik (closes: #538862)
+  * Enable build of kismet plugin
+  * Update Standards-Version (no changes)
+  * Apply patch from mapnik trunk to fix linking against agg
+  * Apply changeset 1340 from mapnik trunk to fix shapefile compiler
+    options
+  * Switch to unversioned boost
+  * Bump Standards-Version (no changes)
+  * Adjust versioned dep libmapnik-dev -> libmapnik0.6
+  * Change libmapnik-dev from Architecture: all to any to satisfy
+    strict versioned dependency requirements
+  * Split out API docs and examples into a separate package to avoid
+    archive bloat due to above
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 19 Oct 2009 23:28:32 +0100
+
+mapnik (0.6.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #522823, #523190)
+  * Update debian/build-svn-tarball.sh for next major release
+  * Update build-dep from proj to libproj-dev to reflect proj package
+    reorganization (closes: #521818)
+  * Add explicit configure step in debian/rules
+  * Update Standards-Version (no changes)
+  * Update build-dep from libltdl3-dev to libltdl-dev to reflect libtool
+    changes
+  * Changes from Ubuntu:
+    - add Homepage control field
+    - update python-mapnik install file to be compatible with Python 2.6
+      transition
+  * Remove old transitional mapnik-plugins package
+  * Don't install demo/c++/Makefile as we aren't shipping pkg-config files
+  * Switch to new boost 1.38 packages
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 13 Apr 2009 17:38:36 +0100
+
+mapnik (0.5.1-3) unstable; urgency=low
+
+  * Link against system agg library (closes: #493786) required for...
+  * Update Standards-Version
+  * Add missing #include to fix FTBFS on GNU/kFreeBSD (closes: #493499)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat,  9 Aug 2008 18:13:25 +0100
+
+mapnik (0.5.1-2) unstable; urgency=low
+
+  * Update mapnik-utils extended description to fix formatting problem
+    (closes: #480333)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 20 Jun 2008 23:38:47 +0100
+
+mapnik (0.5.1-1) unstable; urgency=low
+
+  * New upstream release: re-enables regex support (closes: #471717)
+  * Configure gdal library name dynamically at build time and remove
+    versioned dependency on libgdal1-dev (closes: #473958)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu,  3 Apr 2008 21:41:32 +0100
+
+mapnik (0.5.0-3) unstable; urgency=low
+
+  * Fix FTBFS with gcc 4.3: include missing headers (closes: #454898)
+  * Fix watch file to cope with new filename
+  * Explicitly link again python 2.5 boost library (closes: #468770)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 25 Mar 2008 20:14:22 +0000
+
+mapnik (0.5.0-2) unstable; urgency=low
+
+  * Fix plugin path in python bindings (closes: #466144)
+  * Remove libboost-serialization-dev build depends again, as
+    #457654 has been fixed.
+  * python-all-dev build depends changed to python2.5-dev
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 24 Feb 2008 00:51:03 +0000
+
+mapnik (0.5.0-1) unstable; urgency=low
+
+  * New (final) upstream release
+  * Add libboost-serialization-dev build depends back, to work around
+    #457654 in libboost-dev.
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 11 Feb 2008 23:01:05 +0000
+
+mapnik (0.5~svn638-1) experimental; urgency=low
+
+  * New upstream release
+    - Remove build dependency on libboost-serialization-dev
+    - Add build dependency on libgdal1-dev
+    - Bump python build dependency
+    - Add build dependency on libxml2-dev
+    - Now shipping with upstream's soname
+    - Don't link main library against unnecessary libraries
+    - Add build dependency on libboost-iostreams-dev
+    - Missing includes fixed (closes: #454898)
+  * Correct watch file (thanks to Raphael Geissert; closes: #450108)
+  * Update Standard-Version (no changes)
+  * Update build-svn-tarball.sh
+  * Add mapnik-plugin-base to determine the path to plugins
+  * Add Suggests on postgis
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed,  6 Feb 2008 18:07:29 +0000
+
+mapnik (0.4.0-2) unstable; urgency=low
+
+  * Improve description for mapnik-utils (closes: #420286)
+  * Fix FTBFS due to Boost changes: tweak SConstruct and
+    build dependencies (closes: #425901)
+  * Tweak clean target to fix repeated builds
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 25 May 2007 00:15:23 +0100
+
+mapnik (0.4.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove support for multiple python versions, as Python boost bindings
+    are version-specific.
+  * Include ogcserver script as an example for the python-mapnik package.
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri,  9 Mar 2007 17:14:28 +0000
+
+mapnik (0.3.0+svn424-1) unstable; urgency=low
+
+  * Initial release (Closes: #402792)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 14 Jan 2007 15:53:35 +0000

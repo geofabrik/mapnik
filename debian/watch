@@ -1,0 +1,8 @@
+version=4
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)\d*$//,\
+uversionmangle=s/(\d)[_\.\-\+]?((RC|rc|pre|dev|beta|alpha)(?:-?offset)?\d*)$/$1~$2/;s/RC/rc/,\
+filenamemangle=s/(?:.*?\/)?(?:rel|v|mapnik)?[\-\_]?(\d\S+)\.(tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))/mapnik-$1.$2/,\
+repacksuffix=+ds \
+https://github.com/mapnik/mapnik/releases \
+(?:.*?/archive/)?(?:rel|v|mapnik)?[\-\_]?(\d\S+)\.(?:tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

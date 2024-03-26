@@ -1,0 +1,5 @@
+usr/bin/mapnik-config
+usr/include/*
+usr/lib/*.a
+usr/lib/*.so
+debian/mapnik-plugin-base	usr/bin

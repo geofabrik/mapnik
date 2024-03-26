@@ -1,0 +1,99 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# Enable hardening build flags
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+# Workaround for proj_api.h deprecation in PROJ 6.0.0
+export DEB_CFLAGS_MAINT_APPEND=-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H
+export DEB_CXXFLAGS_MAINT_APPEND=-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H
+
+NJOBS := -j1
+ifneq (,$(filter parallel=%,$(subst $(COMMA), ,$(DEB_BUILD_OPTIONS))))
+NJOBS := -j$(subst parallel=,,$(filter parallel=%,$(subst $(COMMA), ,$(DEB_BUILD_OPTIONS))))
+endif
+
+DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+
+# Disable parallel builds for problematic architectures
+NO_PARALLEL_ARCHS = arm64 armel armhf alpha hurd-i386 kfreebsd-i386 kfreebsd-amd64
+
+ifeq ($(shell dpkg-vendor --derives-from Ubuntu && echo yes),yes)
+	# From mapnik (3.0.8+ds-1ubuntu1):
+	# The amd64 buildds are castrated to 4G RAM and 4G swap,
+	# the ppc64el buildds to 12G RAM and 4G swap.
+	NO_PARALLEL_ARCHS += amd64 ppc64el
+endif
+
+ifneq (,$(filter $(DEB_BUILD_ARCH),$(NO_PARALLEL_ARCHS)))
+	NJOBS = -j1
+endif
+NJOBS = -j10
+
+# scons flags
+SCONS = python3 $(CURDIR)/scons/scons.py
+SCONS_FLAGS := $(NJOBS)
+# -O2
+SCONS_FLAGS += OPTIMIZATION=2
+SCONS_FLAGS += CXX_STD=17
+SCONS_FLAGS += FULL_LIB_PATH=False
+SCONS_FLAGS += INPUT_PLUGINS=csv,gdal,geojson,ogr,pgraster,postgis,raster,shape,sqlite,topojson
+SCONS_FLAGS += PROJ_INCLUDES=/usr/include PROJ_LIBS=/usr/lib
+SCONS_FLAGS += SYSTEM_FONTS=/usr/share/fonts
+SCONS_FLAGS += XMLPARSER=libxml2
+SCONS_FLAGS += DEMO=False
+SCONS_FLAGS += CPP_TESTS=False
+SCONS_FLAGS += PREFIX=/usr LIB_DIR_NAME=/mapnik/3.1
+SCONS_FLAGS += CUSTOM_CXXFLAGS="$(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g"
+#SCONS_FLAGS += CUSTOM_CXXFLAGS="$(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g0"
+SCONS_FLAGS += CUSTOM_CFLAGS="$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g"
+#SCONS_FLAGS += CUSTOM_CFLAGS="$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g0"
+SCONS_FLAGS += CUSTOM_LDFLAGS="$(shell dpkg-buildflags --get LDFLAGS) -g"
+#SCONS_FLAGS += CUSTOM_LDFLAGS="$(shell dpkg-buildflags --get LDFLAGS) -g0"
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf build-python
+	rm -rf debian/stamps
+	dh_clean
+
+override_dh_auto_configure: debian/stamps/configure-python
+debian/stamps/configure-python:
+	-mkdir build-python
+	-mkdir debian/stamps
+	cp -r demo deps fonts include plugins src test utils SConstruct build-python
+	touch $@
+	$(SCONS) -C build-python configure \
+		$(SCONS_FLAGS) \
+		CCFLAGS="$(CFLAGS)" \
+		DESTDIR=$(CURDIR)/debian/tmp
+
+override_dh_auto_build:	debian/stamps/build-python
+debian/stamps/build-python:
+	$(SCONS) $(NJOBS) -C build-python
+
+override_dh_auto_test: debian/stamps/test-python
+debian/stamps/test-python:
+	# nothing yet
+
+override_dh_auto_install: debian/stamps/install-python
+debian/stamps/install-python:
+	$(SCONS) $(NJOBS) -C build-python install
+
+override_dh_install:
+	dh_install --list-missing
+
+override_dh_strip:
+	dh_strip --no-automatic-dbgsym
+	#true
+
+override_dh_prep:
+	dh_prep -Xdebian/tmp
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V

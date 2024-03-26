@@ -1,0 +1,9 @@
+static libraries
+================
+
+mapnik-json and mapnik-wkt are small static libs distributed into mapnik-dev
+by upstream design.
+
+More info on this:
+https://github.com/mapnik/python-mapnik/issues/30#issuecomment-120270946
+

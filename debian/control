@@ -1,0 +1,136 @@
+Source: mapnik
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: David Paleino <dapal@debian.org>,
+           Francesco Paolo Lovergine <frankie@debian.org>,
+           Jérémy Lal <kapouer@melix.org>,
+           Bas Couwenberg <sebastic@debian.org>
+Section: libs
+Priority: optional
+Build-Depends: debhelper (>= 10~),
+               libboost-filesystem-dev,
+               libboost-program-options-dev,
+               libboost-regex-dev,
+               libboost-system-dev,
+               libboost-thread-dev,
+               libcairo-dev,
+               libcurl4-gnutls-dev | libcurl-ssl-dev,
+               libfreetype6-dev,
+               libgdal-dev,
+               libharfbuzz-dev,
+               libicu-dev,
+               libjpeg-dev,
+               libmapbox-variant-dev (>= 1.1.5),
+               libpng-dev,
+               libpq-dev,
+               libproj-dev,
+               libsqlite3-dev,
+               libtiff-dev,
+               libtool,
+               libwebp-dev,
+               libxml2-dev,
+               pkg-config,
+               python3,
+               zlib1g-dev
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/debian-gis-team/mapnik
+Vcs-Git: https://salsa.debian.org/debian-gis-team/mapnik.git
+Homepage: http://www.mapnik.org/
+
+Package: libmapnik3.1
+Architecture: any
+Depends: fonts-dejavu,
+         ${shlibs:Depends},
+         ${misc:Depends}
+Suggests: postgis
+Description: C++ toolkit for developing GIS applications (libraries)
+ Mapnik is an OpenSource C++ toolkit for developing GIS
+ (Geographic Information Systems) applications. At the core is a C++
+ shared library providing algorithms/patterns for spatial data access and
+ visualization.
+ .
+ Essentially a collection of geographic objects (map, layer, datasource,
+ feature, geometry), the library doesn't rely on "windowing systems" and
+ is intended to work in multi-threaded environments
+ .
+ This package contains the shared library and input plugins.
+
+Package: libmapnik-dev
+Architecture: any
+Section: libdevel
+Depends: libmapnik3.1 (= ${binary:Version}),
+         libboost-filesystem-dev,
+         libboost-program-options-dev,
+         libboost-regex-dev,
+         libboost-system-dev,
+         libboost-thread-dev,
+         libc6-dev | libc-dev,
+         libcairo2-dev,
+         libcurl4-gnutls-dev | libcurl-ssl-dev,
+         libfreetype6-dev,
+         libgdal-dev,
+         libharfbuzz-dev,
+         libicu-dev,
+         libjpeg-dev,
+         libmapbox-variant-dev (>= 1.1.5),
+         libpng-dev,
+         libpq-dev,
+         libproj-dev,
+         libsqlite3-dev,
+         libtiff-dev,
+         libwebp-dev,
+         libxml2-dev,
+         pkg-config,
+         zlib1g-dev,
+         ${misc:Depends}
+Recommends: mapnik-doc
+Breaks: libmapnik2-dev (<< 2.2.0+ds1-1~)
+Replaces: libmapnik2-dev (<< 2.2.0+ds1-1~)
+Description: C++ toolkit for developing GIS applications (devel)
+ Mapnik is an OpenSource C++ toolkit for developing GIS
+ (Geographic Information Systems) applications. At the core is a C++
+ shared library providing algorithms/patterns for spatial data access and
+ visualization.
+ .
+ Essentially a collection of geographic objects (map, layer, datasource,
+ feature, geometry), the library doesn't rely on "windowing systems" and
+ is intended to work in multi-threaded environments
+ .
+ This package contains the development headers, API documentation, and
+ build utilities.
+
+Package: mapnik-utils
+Architecture: any
+Section: utils
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: C++ toolkit for developing GIS applications (utilities)
+ Mapnik is an OpenSource C++ toolkit for developing GIS
+ (Geographic Information Systems) applications. At the core is a C++
+ shared library providing algorithms/patterns for spatial data access and
+ visualization.
+ .
+ Essentially a collection of geographic objects (map, layer, datasource,
+ feature, geometry), the library doesn't rely on "windowing systems" and
+ is intended to work in multi-threaded environments
+ .
+ This package contains miscellaneous utilities distributed with mapnik:
+ .
+ shapeindex: program to creates file system based index for ESRI shape-files
+
+Package: mapnik-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Recommends: libmapnik-dev
+Description: C++ toolkit for developing GIS applications (doc)
+ Mapnik is an OpenSource C++ toolkit for developing GIS
+ (Geographic Information Systems) applications. At the core is a C++
+ shared library providing algorithms/patterns for spatial data access and
+ visualization.
+ .
+ Essentially a collection of geographic objects (map, layer, datasource,
+ feature, geometry), the library doesn't rely on "windowing systems" and
+ is intended to work in multi-threaded environments
+ .
+ This package contains developer documentation.

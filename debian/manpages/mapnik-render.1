@@ -1,0 +1,65 @@
+'\" -*- coding: us-ascii -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH mapnik-render 1 "10 July 2015" "" ""
+.SH NAME
+mapnik-render \- Mapnik Maps on the Command-Line
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBmapnik-render\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[\fIoptions\fR]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+\fBmapnik-render\fR is a third-party program that allows you to
+easily generate mapnik graphics from Mapnik xml or Cascadenik mml.
+.TP 0.2i
+\(bu
+No python coding is required, only a working Mapnik installation
+and an XML mapfile.
+.TP 0.2i
+\(bu
+\fBmapnik-render\fR has a variety of options that make it
+a useful mapfile debugger.
+.TP 0.2i
+\(bu
+Using \fBmapnik-render\fR is an easy way to test and
+develop your xml mapfiles before launching on a server.
+.TP 0.2i
+\(bu
+\fBmapnik-render\fR should automatically open the rendered
+map once completed.
+.SH OPTIONS
+.TP 
+\*(T<\fB\-h\fR\*(T>, \*(T<\fB\-\-help\fR\*(T>
+produce usage message
+.TP 
+\*(T<\fB\-V\fR\*(T>, \*(T<\fB\-\-version\fR\*(T>
+print version string
+.TP 
+\*(T<\fB\-v\fR\*(T>, \*(T<\fB\-\-verbose\fR\*(T>
+verbose output
+.TP 
+\*(T<\fB\-\-open\fR\*(T>
+automatically open the file after rendering (os x only)
+.TP 
+\*(T<\fB\-\-xml\fR\*(T> \fIfile\fR
+xml map to read
+.TP 
+\*(T<\fB\-\-img\fR\*(T> \fIfile\fR
+image to render
+.TP 
+\*(T<\fB\-\-scale\-factor\fR\*(T> \fInumber\fR
+scale factor for rendering
+.TP 
+\*(T<\fB\-\-variables\fR\*(T>
+make map parameters available as render-time variables

@@ -1,0 +1,312 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Mapnik
+Upstream-Contact: https://github.com/mapnik/mapnik/issues
+Source: https://github.com/mapnik/mapnik/
+ Repackaged to ease copyright maintenance
+Files-Excluded:
+ fonts/dejavu*
+ fonts/unifont*
+
+Files: *
+Copyright: 2006-2021, Artem Pavlenko
+           2005-2012, Jean-Francois Doyon
+                2011, Hermann Kraus
+                2010, Robert Coup
+                2009, Dane Springmeyer
+                2008, Tom Hughes
+                2006, 10East Corp.
+License: LGPL-2.1+
+
+Files: deps/boost/gil/*
+Copyright: 2004-2007, Christian Henning
+License: BSL-1.0
+
+Files: deps/agg/*
+Copyright: 2002-2005, Maxim Shemanarev (McSeem)
+                2005, Tony Juricic
+License: agg or BSD-3-clause
+Comment: upstream mapnik forgot to update deps/agg/copying, see
+ https://github.com/mapnik/mapnik/issues/1982
+
+Files: deps/agg/include/agg_conv_offset.h
+Copyright: 2010-2015, Angus Johnson
+License: BSL-1.0
+
+Files: deps/mapnik/sparsehash/*
+Copyright: 2005-2010, Google Inc.
+License: BSD-3-clause
+
+Files: demo/data/*
+Copyright: Her Majesty the Queen in Right of Canada, Department of
+ Natural Resources. All rights reserved.
+License: Geogratis
+
+Files: scons/*
+Copyright: 2001-2017, The SCons Foundation
+           2001-2003, Steven Knight
+                2003, Stichting NLnet Labs
+License: Expat
+
+Files: scripts/travis-command-wrapper.py
+Copyright: 2015, Intel Corporation
+License: Expat
+
+Files: debian/*
+Copyright: 2013, Jérémy Lal <kapouer@melix.org>
+           2013, YunQiang Su <wzssyqa@gmail.com>
+      2010-2011, David Paleino <dapal@debian.org>
+      2006-2009, Dominic Hargreaves <dom@earth.li>
+License: GPL-2+
+
+Files: debian/rules
+Copyright: 2010-2011, Christoph Egger
+License: BSD-3-clause
+
+License: LGPL-2.1+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this package; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+Comment: on Debian systems, the complete text of the GNU Lesser General
+ Public License v2.1 can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+Comment: on Debian systems, the complete text of the GNU General Public
+ License v2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: agg
+ Permission to copy, use, modify, sell and distribute this software
+ is granted provided this copyright notice appears in all copies.
+ This software is provided "as is" without express or implied
+ warranty, and with no claim as to its suitability for any purpose.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+   1. Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+ .
+   2. Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in
+      the documentation and/or other materials provided with the
+      distribution.
+ .
+   3. The name of the author may not be used to endorse or promote
+      products derived from this software without specific prior
+      written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: BSL-1.0
+ Permission is hereby granted, free of charge, to any person or
+ organization obtaining a copy of the software and accompanying
+ documentation covered by this license (the "Software") to use,
+ reproduce, display, distribute, execute, and transmit the Software,
+ and to prepare derivative works of the Software, and to permit
+ third-parties to whom the Software is furnished to do so, all
+ subject to the following:
+ .
+ The copyright notices in the Software and this entire statement,
+ including the above license grant, this restriction and the
+ following disclaimer, must be included in all copies of the
+ Software, in whole or in part, and all derivative works of the
+ Software, unless such copies or derivative works are solely in the
+ form of machine-executable object code generated by a source
+ language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND
+ NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE
+ DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER
+ LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+License: Geogratis
+ GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA
+ This is a legal agreement between you ("Licensee") and Her Majesty
+ the Queen in Right of Canada ("Canada"), as represented by the
+ Minister of Natural Resources Canada. BY ACCESSING, DOWNLOADING,
+ PRINTING OR USING THE DATA, INFORMATION AND MATERIALS BEING
+ PROVIDED WITH, OR ACCESSIBLE PURSUANT TO THIS AGREEMENT, YOU ARE
+ AGREEING TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT
+ AGREE TO THE TERMS OF THIS AGREEMENT, YOU MUST IMMEDIATELY DISPOSE
+ OF ANY SUCH DATA, INFORMATION, MATERIALS AND ANY DERIVED PRODUCTS.
+ .
+   1. WHEREAS Canada is the owner of the data (the "Data") accessible
+      pursuant to the terms and conditions of this Agreement;
+   2. AND WHEREAS the Licensee wishes to obtain certain rights to
+      the Data, on terms and conditions herein contained;
+   3. AND WHEREAS Canada represents that it has full authority to grant
+      the rights desired by the Licensee on the terms and conditions
+      herein contained;
+   4. AND WHEREAS the parties hereto are desirous of entering into a
+      licence agreement on the basis herein set forth.
+ .
+ NOW, THEREFORE, in consideration of the covenants contained in this
+ Agreement, the parties agree as follows:
+ .
+ 1.0 DEFINITIONS
+ .
+   1. "Canada's Data" means any and all Data, the Intellectual Property
+      Rights of which vest with Canada.
+   2. "Data" means any digital data, meta-data, or documentation subject
+      to the terms and conditions of this Agreement.
+   3. "Derivative Products" means any product, system, sub-system,
+      device, component, material or software that incorporates or uses
+      any part of the Data.
+   4. "Intellectual Property Rights" means any intellectual property
+      right recognised by law, including any intellectual property right
+      protected through legislation, such as that governing, but not
+      limited to, copyright and patents.
+ .
+ 2.0 LICENCE GRANT
+ .
+   1. Subject to this Agreement, Canada hereby grants to the Licensee a
+      non-exclusive, fully paid, royalty-free right and licence to
+      exercise all Intellectual Property Rights in the Data. This
+      includes the right to use, incorporate, sublicense (with further
+      right of sublicensing), modify, improve, further develop, and
+      distribute the Data; and to manufacture and / or distribute
+      Derivative Products.
+   2. The Intellectual Property Rights arising from any modification,
+      improvement, development or translation of the Data, or from the
+      manufacture of Derivative Products, effected by or for the
+      Licensee, shall vest in the Licensee or in such person as the
+      Licensee shall decide.
+ .
+ 3.0 PROTECTION AND ACKNOWLEDGEMENT OF SOURCE
+ .
+   1. Use of the Data shall not be construed as an endorsement by Canada
+      of any Derivative Products. The Licensee shall identify the source
+      of the Data, in the following manner, where any of the Data are
+      redistributed, or contained within Derivative Products:
+      "© Her Majesty the Queen in Right of Canada, Department of Natural
+       Resources. All rights reserved."
+ .
+ 4.0 WARRANTY, LIABILITY, INDEMNITY
+ .
+   1. Canada makes no representation or warranty of any kind with
+      respect to the accuracy, usefulness, novelty, validity, scope,
+      completeness or currency of the Data and expressly disclaims
+      any implied warranty of merchantability or fitness for a
+      particular purpose of the Data. Canada does not ensure or
+      warrant compatibility with past, current or future versions of
+      any browser to access the site's Data.
+   2. The Licensee shall have no recourse against Canada, whether by
+      way of any suit or action, for any loss, liability, damage or
+      cost that the Licensee may suffer or incur at any time, by
+      reason of the Licensee's possession or use of the Data.
+   3. The Licensee shall indemnify Canada and its officers,
+      employees, agents and contractors from all claims alleging
+      loss, costs, expenses, damages or injuries (including injuries
+      resulting in death) arising out of the Licensee's possession
+      or use of the Data.
+   4. The Licensee shall license all persons or parties who obtain
+      Data or Derivative Products from the Licensee the right to use
+      the Data or Derivative Products by way of a license agreement,
+      and that agreement shall impose upon these persons or parties
+      the same terms and conditions as those contained in section 4.0 of
+      this Agreement.
+   5. 4.4 The Licensee's liability to indemnify Canada under this
+      Agreement shall not affect or prejudice Canada from exercising any
+      other rights under law.
+ .
+ 5.0 TERM
+ .
+   1. This Agreement is effective as of the date and time of acceptance
+      (Eastern Time) and shall remain in effect for a period of one (1)
+      year, subject to subsection 5.2 and section 6.0 below.
+   2. At the end of the first term, this Agreement shall automatically
+      be extended for successive one (1) year terms, subject to
+      section 6.0 below.
+ .
+ 6.0 TERMINATION
+ .
+   1. Notwithstanding section 5.0, this Agreement shall terminate:
+      1. automatically and without notice, if the Licensee commits or
+         permits a breach of any of its covenants or obligations under
+         this Agreement;
+      2. upon written notice of termination by the Licensee at any time,
+         and such termination shall take effect thirty (30) days after
+         the receipt by Canada of such notice; or
+      3. upon mutual agreement of the parties.
+   2. Upon the termination for whatever reason of this Agreement, the
+      Licensee's obligations under section 4.0 shall survive; and the
+      Licensee's rights under section 2.0 shall immediately cease.
+   3. Upon the termination for whatever reason of this Agreement, the
+      Licensee shall delete or destroy all Data acquired under this
+      Agreement immediately or within a reasonable timeframe where the
+      Data is required to complete orders of Derivative Products made
+      before the termination date of this Agreement.
+ .
+ 7.0 GENERAL
+ .
+   1. Applicable Law
+      This Agreement shall be construed and enforced in accordance with,
+      and the rights of the parties shall be governed by, the laws of
+      Ontario and Canada as applicable. The parties hereto attorn to the
+      jurisdiction of the Superior Court of the Province of Ontario.
+   2. Entire Agreement
+      This Agreement constitutes the entire agreement between the
+      parties with respect to its subject matter. This Agreement may
+      only be amended in writing, signed by both parties, which
+      expressly states the intention to amend this Agreement.
+   3. Dispute Resolution
+      If a dispute arises concerning this Agreement, the parties shall
+      attempt to resolve the matter by negotiation.
+

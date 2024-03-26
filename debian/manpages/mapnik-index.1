@@ -1,0 +1,50 @@
+'\" -*- coding: us-ascii -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH mapnik-index 1 "10 July 2015" "" ""
+.SH NAME
+mapnik-index \- Mapnik CSV/GeoJSON index utility
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBmapnik-index\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[\fIoptions\fR]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+\fBmapnik-index\fR is a utilty to create index files for CSV and
+GeoJSON data files. The index files will have .index appended to
+the input filenames.
+.SH OPTIONS
+.TP 
+\*(T<\fB\-h\fR\*(T>, \*(T<\fB\-\-help\fR\*(T>
+produce usage message
+.TP 
+\*(T<\fB\-V\fR\*(T>, \*(T<\fB\-\-version\fR\*(T>
+print version string
+.TP 
+\*(T<\fB\-v\fR\*(T>, \*(T<\fB\-\-verbose\fR\*(T>
+verbose output
+.TP 
+\*(T<\fB\-d\fR\*(T>, \*(T<\fB\-\-depth\fR\*(T> \fInumber\fR
+max tree depth (default 8)
+.TP 
+\*(T<\fB\-r\fR\*(T>, \*(T<\fB\-\-ratio\fR\*(T> \fInumber\fR
+split ratio (default 0.55)
+.TP 
+\*(T<\fB\-s\fR\*(T>, \*(T<\fB\-\-separator\fR\*(T> \fIcharacter\fR
+CSV columns separator
+.TP 
+\*(T<\fB\-q\fR\*(T>, \*(T<\fB\-\-quote\fR\*(T> \fIcharacter\fR
+CSV columns quote
+.TP 
+\*(T<\fB\-\-files\fR\*(T> \fIpath...\fR
+Files to index: file1 file2 ...fileN
