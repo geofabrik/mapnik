@@ -1,3 +1,11 @@
+mapnik (4.0.0+geofabrik-prerel-1) jammy; urgency=medium
+
+  * Build with version number 4.0.0 to indicate broken ABI compatibility.
+    Please note that this is not version 4.0.0 but just an old version of the
+    master branch.
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Thu, 26 Mar 2024 15:32:27 +0100
+
 mapnik (3.1.0+ds-1geofabrik-3) jammy; urgency=medium
 
   * Add open_options support for OGR input plugin

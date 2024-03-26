@@ -46,7 +46,7 @@ SCONS_FLAGS += SYSTEM_FONTS=/usr/share/fonts
 SCONS_FLAGS += XMLPARSER=libxml2
 SCONS_FLAGS += DEMO=False
 SCONS_FLAGS += CPP_TESTS=False
-SCONS_FLAGS += PREFIX=/usr LIB_DIR_NAME=/mapnik/3.1
+SCONS_FLAGS += PREFIX=/usr LIB_DIR_NAME=/mapnik/4.0
 SCONS_FLAGS += CUSTOM_CXXFLAGS="$(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g"
 #SCONS_FLAGS += CUSTOM_CXXFLAGS="$(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g0"
 SCONS_FLAGS += CUSTOM_CFLAGS="$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) -g"
