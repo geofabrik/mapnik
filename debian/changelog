@@ -1,3 +1,9 @@
+mapnik (4.0.0+geofabrik-rc-1) jammy; urgency=medium
+
+  * Upgraded to version 4.0.0-rc1
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Wed, 29 May 2024 17:19:42 +0200
+
 mapnik (4.0.0+geofabrik-prerel-1) jammy; urgency=medium
 
   * Build with version number 4.0.0 to indicate broken ABI compatibility.
