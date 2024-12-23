@@ -1,3 +1,9 @@
+mapnik (4.0.4+geofabrik) jammy; urgency=medium
+
+  * Upgraded to version 4.0.4
+
+ -- Michael Reichert <michael.reichert@geofabrik.de>  Wed, 04 Dec 2024 13:24:12 +0100
+
 mapnik (4.0.0+geofabrik-rc-1) jammy; urgency=medium
 
   * Upgraded to version 4.0.0-rc1
